@@ -1,3 +1,113 @@
+body {
+  color: #333;
+  font-family: "Open Sans", sans-serif;
+  font-feature-settings: "kern", "liga", "pnum";
+  font-size: 1em;
+  line-height: 1.5; }
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Lato", sans-serif;
+  line-height: 1;
+  margin: 0 0 0.75em;
+  text-align: center; }
+
+h1, h3 {
+  font-weight: 700; }
+
+h2, h4 {
+  font-weight: 500; }
+
+h1, h2 {
+  /* TODO: test larger screen width */
+  font-size: 3.6em; }
+  @media only screen and (max-width: 1824px) {
+    h1, h2 {
+      /* TODO: test larger screen width */ } }
+  @media only screen and (max-width: 1224px) {
+    h1, h2 {
+      font-size: 3.4em; } }
+  @media only screen and (max-width: 1024px) {
+    h1, h2 {
+      font-size: 3em; } }
+  @media only screen and (max-width: 768px) {
+    h1, h2 {
+      font-size: 2.6em; } }
+  @media only screen and (max-width: 640px) {
+    h1, h2 {
+      font-size: 2.2em; } }
+  @media only screen and (max-width: 321px) {
+    h1, h2 {
+      font-size: 2em; } }
+
+h3, h4 {
+  /* TODO: test larger screen width */
+  font-size: 2.7em; }
+  @media only screen and (max-width: 1824px) {
+    h3, h4 {
+      /* TODO: test larger screen width */ } }
+  @media only screen and (max-width: 1224px) {
+    h3, h4 {
+      font-size: 2.55em; } }
+  @media only screen and (max-width: 1024px) {
+    h3, h4 {
+      font-size: 2.25em; } }
+  @media only screen and (max-width: 768px) {
+    h3, h4 {
+      font-size: 1.95em; } }
+  @media only screen and (max-width: 640px) {
+    h3, h4 {
+      font-size: 1.65em; } }
+  @media only screen and (max-width: 321px) {
+    h3, h4 {
+      font-size: 1.5em; } }
+
+p {
+  margin: auto;
+  margin-top: 1em;
+  margin-bottom: 1.5em;
+  /* TODO: larger screen width */
+  font-size: 1.2em;
+  width: 700px; }
+  @media only screen and (max-width: 1824px) {
+    p {
+      /* TODO: larger screen width */ } }
+  @media only screen and (max-width: 768px) {
+    p {
+      font-size: 1.15em;
+      width: 600px; } }
+  @media only screen and (max-width: 640px) {
+    p {
+      width: auto;
+      padding: 8px 15px 8px;
+      font-size: 1em; } }
+  @media only screen and (max-width: 321px) {
+    p {
+      font-size: 0.8em; } }
+  p.details {
+    text-align: justify; }
+
+a {
+  color: #477dca;
+  text-decoration: none;
+  transition: color 150ms ease; }
+  a:active, a:focus, a:hover {
+    color: #355e98; }
+
+hr {
+  border-bottom: 1px solid #ddd;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  margin: 1.5em 0; }
+
+img,
+picture {
+  margin: 0;
+  max-width: 100%; }
+
 .header-background,
 .header-content {
   width: 100%;

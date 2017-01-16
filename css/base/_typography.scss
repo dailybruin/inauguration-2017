@@ -1,0 +1,181 @@
+body {
+  color: $base-font-color;
+  font-family: $base-font-family;
+  font-feature-settings: "kern", "liga", "pnum";
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: $heading-font-family;
+    //font-size: $base-font-size;
+    line-height: $heading-line-height;
+    margin: 0 0 $small-spacing;
+    text-align: center;
+}
+
+h1, h3 {
+    font-weight: 700;
+}
+
+h2, h4 {
+    font-weight: 500;
+}
+
+h1, h2 {
+    // Large screens
+    /* TODO: test larger screen width */
+    font-size: $big-heading-font-size * 1.8;
+    
+    //    Desktops and laptops
+    @media only screen and (max-width: $media-breakpoint-desktops) {
+        /* TODO: test larger screen width */
+    }
+
+    //    iPads (landscape)
+    @media only screen and (max-width: $media-breakpoint-ipads-land) {
+        font-size: $big-heading-font-size * 1.7;
+    }
+
+    //    iPads (portrait)
+    @media only screen and (max-width: $media-breakpoint-ipads-port) {
+        font-size: $big-heading-font-size * 1.5;
+    }
+
+    //    Smartphones (landscape)
+    @media only screen and (max-width: $media-breakpoint-smartphones-land) {
+        font-size: $big-heading-font-size * 1.3;
+    }
+
+    //    Big smartphones (portrait) (ie: Galaxy 3 has 360)
+    @media only screen and (max-width: $media-breakpoint-smartphones-big) {
+        font-size: $big-heading-font-size * 1.1;
+    }
+
+    //    Smartphones (portrait) (ie: Galaxy 1)
+    @media only screen and (max-width: $media-breakpoint-smartphones-port) {
+        font-size: $big-heading-font-size;
+    }
+}
+
+h3, h4 {
+        // Large screens
+    /* TODO: test larger screen width */
+    font-size: $small-heading-font-size * 1.8;
+    
+    //    Desktops and laptops
+    @media only screen and (max-width: $media-breakpoint-desktops) {
+        /* TODO: test larger screen width */
+    }
+
+    //    iPads (landscape)
+    @media only screen and (max-width: $media-breakpoint-ipads-land) {
+        font-size: $small-heading-font-size * 1.7;
+    }
+
+    //    iPads (portrait)
+    @media only screen and (max-width: $media-breakpoint-ipads-port) {
+        font-size: $small-heading-font-size * 1.5;
+    }
+
+    //    Smartphones (landscape)
+    @media only screen and (max-width: $media-breakpoint-smartphones-land) {
+        font-size: $small-heading-font-size * 1.3;
+    }
+
+    //    Big smartphones (portrait) (ie: Galaxy 3 has 360)
+    @media only screen and (max-width: $media-breakpoint-smartphones-big) {
+        font-size: $small-heading-font-size * 1.1;
+    }
+
+    //    Smartphones (portrait) (ie: Galaxy 1)
+    @media only screen and (max-width: $media-breakpoint-smartphones-port) {
+        font-size: $small-heading-font-size;
+    }
+}
+
+p {
+    //border: 1px solid red;
+    //margin: 0 0 $small-spacing;
+    //padding: 5px $small-spacing 5px;
+    
+    margin: auto;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+    
+    // Large screens
+    /* TODO: larger screen width */
+    font-size: $base-font-size * 1.2;
+    width: 700px;
+    
+    
+    //    Desktops and laptops
+    @media only screen and (max-width: $media-breakpoint-desktops) {
+        //padding: 25px 250px 15px;
+        /* TODO: larger screen width */
+    }
+
+    //    iPads (landscape)
+    @media only screen and (max-width: $media-breakpoint-ipads-land) {
+        //padding: 25px 190px 15px;
+    }
+
+    //    iPads (portrait)
+    @media only screen and (max-width: $media-breakpoint-ipads-port) {
+        //padding: 20px 100px 10px;
+    }
+
+    //    Smartphones (landscape)
+    @media only screen and (max-width: $media-breakpoint-smartphones-land) {
+        font-size: $base-font-size * 1.15;
+        //padding: 15px 30px 10px;
+        width: 600px;
+        //color: red;
+    }
+
+    //    Big smartphones (portrait) (ie: Galaxy 3 has 360)
+    @media only screen and (max-width: $media-breakpoint-smartphones-big) {
+        width: auto;
+        padding: 8px 15px 8px;
+        font-size: $base-font-size;
+        //color: blue;
+    }
+
+    //    Smartphones (portrait) (ie: Galaxy 1)
+    @media only screen and (max-width: $media-breakpoint-smartphones-port) {
+        font-size: $base-font-size * 0.8;
+    }
+    
+    &.details {
+        text-align: justify;
+    }
+}
+
+a {
+  color: $action-color;
+  text-decoration: none;
+  transition: color $base-duration $base-timing;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: shade($action-color, 25%);
+  }
+}
+
+hr {
+  border-bottom: $base-border;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  margin: $base-spacing 0;
+}
+
+img,
+picture {
+  margin: 0;
+  max-width: 100%;
+}

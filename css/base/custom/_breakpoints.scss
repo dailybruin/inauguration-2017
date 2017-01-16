@@ -1,0 +1,34 @@
+//  _breakpoints.scss
+//  variables containing media breakpoints
+
+//  http://stackoverflow.com/questions/20301680/responsive-design-standard-breakpoint-media-queries-for-smartphone-and-tablet
+
+//  varialbes
+$media-breakpoint-desktops: 1824px;
+$media-breakpoint-ipads-land: 1224px;
+$media-breakpoint-ipads-port: 1024px;
+$media-breakpoint-smartphones-land: 768px;
+$media-breakpoint-smartphones-big: 640px;
+$media-breakpoint-smartphones-port: 321px;
+
+//  usage
+//// Large screens
+///*some CSS*/
+
+////    Desktops and laptops
+//@media only screen and (max-width: $media-breakpoint-desktops) {/*some CSS*/}
+//
+////    iPads (landscape)
+//@media only screen and (max-width: $media-breakpoint-ipads-land) {/*some CSS*/}
+//
+////    iPads (portrait)
+//@media only screen and (max-width: $media-breakpoint-ipads-port) {/*some CSS*/}
+//
+////    Smartphones (landscape)
+//@media only screen and (max-width: $media-breakpoint-smartphones-land) {/*some CSS*/}
+//
+////    Big smartphones (portrait) (ie: Galaxy 3 has 360)
+//@media only screen and (max-width: $media-breakpoint-smartphones-big) {/*some CSS*/}
+//
+////    Smartphones (portrait) (ie: Galaxy 1)
+//@media only screen and (max-width: $media-breakpoint-smartphones-port) {/*some CSS*/}
