@@ -9,38 +9,38 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: "Lato", sans-serif;
+  font-family: "Open Sans", sans-serif;
   line-height: 1;
   margin: 0 0 0.75em;
   text-align: center; }
 
 h1, h3 {
-  font-weight: 700; }
+  font-weight: 400; }
 
 h2, h4 {
   font-weight: 500; }
 
 h1, h2 {
   /* TODO: test larger screen width */
-  font-size: 3.6em; }
+  font-size: 5.4em; }
   @media only screen and (max-width: 1824px) {
     h1, h2 {
       /* TODO: test larger screen width */ } }
   @media only screen and (max-width: 1224px) {
     h1, h2 {
-      font-size: 3.4em; } }
+      font-size: 5.1em; } }
   @media only screen and (max-width: 1024px) {
     h1, h2 {
-      font-size: 3em; } }
+      font-size: 4.5em; } }
   @media only screen and (max-width: 768px) {
     h1, h2 {
-      font-size: 2.6em; } }
+      font-size: 3.9em; } }
   @media only screen and (max-width: 640px) {
     h1, h2 {
-      font-size: 2.2em; } }
+      font-size: 3.3em; } }
   @media only screen and (max-width: 321px) {
     h1, h2 {
-      font-size: 2em; } }
+      font-size: 3em; } }
 
 h3, h4 {
   /* TODO: test larger screen width */
@@ -139,7 +139,7 @@ picture {
   position: fixed; }
 
 .header-content {
-  margin-top: -100px; }
+  margin-top: -20px; }
 
 .header-content * {
   position: relative;
@@ -153,6 +153,9 @@ picture {
   width: 100%;
   color: white;
   clear: both; }
+
+.header-content h1 {
+  margin-bottom: 0; }
 
 .main {
   height: 500px;
