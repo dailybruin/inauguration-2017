@@ -1,0 +1,65 @@
+//  _intro.scss
+
+$header-background-breakpoint1: 500px;
+$header-background-breakpoint2: 570px;
+$header-background-breakpoint3: 670px;
+$header-background-breakpoint4: 768px;
+$header-background-breakpoint5: 992px;
+$header-height1:300px;
+$header-height2:350px;
+$header-height3:400px;
+$header-height4:450px;
+$header-height5:520px;
+$header-height6:520px;
+
+.header-background,
+.header-content {
+    width: 100%;
+    height: $header-height6;
+    
+    @media only screen and (max-width: $header-background-breakpoint1) {
+        height: $header-height1;
+    }
+    
+    @media only screen and (min-width: $header-background-breakpoint1 + 1) and (max-width: $header-background-breakpoint2) {
+        height: $header-height2;
+    }
+    
+    @media only screen and (min-width: $header-background-breakpoint2 + 1) and (max-width: $header-background-breakpoint3) {
+        height: $header-height3;
+    }
+    
+    @media only screen and (min-width: $header-background-breakpoint3 + 1) and (max-width: $header-background-breakpoint4) {
+        height: $header-height4;
+    }
+    
+    @media only screen and (min-width: $header-background-breakpoint4 + 1) and (max-width: $header-background-breakpoint5) {
+        height: $header-height5;
+    }
+}
+
+.header-background {
+    background: url("../img/header.jpg") no-repeat center;
+    background-size: cover;
+    position: fixed;
+}
+
+.header-content {
+
+    margin-top: -100px;
+}
+
+.header-content * {
+    position: relative; //  because of fixed, need to include this line to show
+    
+    //  vertically centered
+    top: 50%;
+    @include transform(translate(0, -50%));
+    
+    //  horizontally centered
+    text-align: center;
+    width: 100%;
+    
+    color: white;
+    clear: both;    //  need this for floating navbar
+}
