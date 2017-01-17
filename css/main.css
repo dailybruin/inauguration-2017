@@ -8,17 +8,19 @@ body {
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5,
+h6 {
   font-family: "Open Sans", sans-serif;
   line-height: 1;
   margin: 0 0 0.75em;
   text-align: center; }
 
-h1, h3 {
+h1, h3, h5 {
   font-weight: 400; }
 
-h2, h4 {
-  font-weight: 500; }
+h2, h4, h6 {
+  font-weight: 300; }
 
 h1, h2 {
   /* TODO: test larger screen width */
@@ -44,19 +46,13 @@ h1, h2 {
 
 h3, h4 {
   /* TODO: test larger screen width */
-  font-size: 2.7em; }
+  font-size: 1.95em; }
   @media only screen and (max-width: 1824px) {
     h3, h4 {
       /* TODO: test larger screen width */ } }
-  @media only screen and (max-width: 1224px) {
-    h3, h4 {
-      font-size: 2.55em; } }
-  @media only screen and (max-width: 1024px) {
-    h3, h4 {
-      font-size: 2.25em; } }
   @media only screen and (max-width: 768px) {
     h3, h4 {
-      font-size: 1.95em; } }
+      font-size: 1.8em; } }
   @media only screen and (max-width: 640px) {
     h3, h4 {
       font-size: 1.65em; } }
@@ -64,19 +60,35 @@ h3, h4 {
     h3, h4 {
       font-size: 1.5em; } }
 
+h5, h6 {
+  /* TODO: test larger screen width */
+  font-size: 1.43em; }
+  @media only screen and (max-width: 1824px) {
+    h5, h6 {
+      /* TODO: test larger screen width */ } }
+  @media only screen and (max-width: 768px) {
+    h5, h6 {
+      font-size: 1.32em; } }
+  @media only screen and (max-width: 640px) {
+    h5, h6 {
+      font-size: 1.21em; } }
+  @media only screen and (max-width: 321px) {
+    h5, h6 {
+      font-size: 1.1em; } }
+
 p {
   margin: auto;
   margin-top: 1em;
   margin-bottom: 1.5em;
   /* TODO: larger screen width */
-  font-size: 1.2em;
+  font-size: 1em;
   width: 700px; }
   @media only screen and (max-width: 1824px) {
     p {
       /* TODO: larger screen width */ } }
   @media only screen and (max-width: 768px) {
     p {
-      font-size: 1.15em;
+      font-size: 1em;
       width: 600px; } }
   @media only screen and (max-width: 640px) {
     p {
@@ -158,7 +170,6 @@ picture {
   margin-bottom: 0; }
 
 .main {
-  height: 500px;
   width: 100%;
   margin-top: -20px;
   background-color: white;
@@ -217,5 +228,33 @@ picture {
 
 .navbar-active {
   border-bottom: 2px solid #477dca; }
+
+.item-container {
+  margin-top: 25px;
+  text-align: center; }
+
+.item {
+  margin: 0 auto; }
+
+.item-img {
+  height: 180px; }
+
+.item-img img {
+  height: 100%; }
+
+.item-headline {
+  margin-top: 10px;
+  margin-bottom: 5px; }
+
+.item-time-author {
+  margin-bottom: 0px;
+  color: #999; }
+
+.item-time {
+  font-style: italic;
+  letter-spacing: 0.5px; }
+
+.item-description {
+  margin-top: 10px; }
 
 /*# sourceMappingURL=main.css.map */

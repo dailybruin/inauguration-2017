@@ -1,0 +1,39 @@
+// _items.scss
+
+.item-container {
+    margin-top: 25px;
+    // height: 1000px;
+    // background-color: green;
+    text-align: center;
+}
+
+.item {
+    margin: 0 auto;
+}
+
+.item-img {
+    height: 180px;
+}
+
+.item-img img {
+    height: 100%;
+}
+
+.item-headline {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.item-time-author {
+    margin-bottom: 0px;
+    color: $medium-gray;
+}
+
+.item-time {
+    font-style: italic;
+    letter-spacing: 0.5px;
+}
+
+.item-description {
+    margin-top: 10px;
+}
