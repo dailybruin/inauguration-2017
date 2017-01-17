@@ -1,0 +1,27 @@
+// _navbar.scss
+
+.navbar {
+    text-align: center;
+}
+
+.navbar ul {
+    display: inline-block;
+    -webkit-padding-start: 0;
+}
+
+.navbar ul li {
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.navbar ul li a {
+    color: $navbar-text-color;
+}
+
+.navbar .navbar-divider {
+    height: 15px;
+    width: 2px;
+    @include transform(translate(0, 10%));  // move down a bit
+    background-color: $navbar-text-color;
+}

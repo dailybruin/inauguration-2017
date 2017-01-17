@@ -3,20 +3,17 @@
 .main {
     height: 500px;
     width: 100%;
+    margin-top: -20px;
     background-color: white;
     position: relative; //  because of fixed, need to include this line to show
-    //border: 1px solid red;
     @include transform(translateZ(1px));    //  fix safari z-index with fixed issue
     
     & > div > h3 {
-        //border: 1px solid red;
         @include transform(translate(0, 20%));
     }
-    
-    & > div > p {
-        //border: 1px solid blue;
-    }
 }
+
+
 
 
 

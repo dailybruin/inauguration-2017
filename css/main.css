@@ -160,6 +160,7 @@ picture {
 .main {
   height: 500px;
   width: 100%;
+  margin-top: -20px;
   background-color: white;
   position: relative;
   -webkit-transform: translateZ(1px);
@@ -173,5 +174,30 @@ picture {
     -ms-transform: translate(0, 20%);
     -o-transform: translate(0, 20%);
     transform: translate(0, 20%); }
+
+.navbar {
+  text-align: center; }
+
+.navbar ul {
+  display: inline-block;
+  -webkit-padding-start: 0; }
+
+.navbar ul li {
+  display: inline-block;
+  margin-left: 5px;
+  margin-right: 5px; }
+
+.navbar ul li a {
+  color: black; }
+
+.navbar .navbar-divider {
+  height: 15px;
+  width: 2px;
+  -webkit-transform: translate(0, 10%);
+  -moz-transform: translate(0, 10%);
+  -ms-transform: translate(0, 10%);
+  -o-transform: translate(0, 10%);
+  transform: translate(0, 10%);
+  background-color: black; }
 
 /*# sourceMappingURL=main.css.map */
