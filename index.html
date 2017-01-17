@@ -56,28 +56,21 @@
                 </ul>
             </nav>
 
-            <div class="item-container">
-                <script id="item-template" type="text/x-handlebars-template">
-                    {{#each .}}
-                    <div id="item{{@index}}" class="item">
-                        <div class="item-img">
-                            <img src="{{this.gsx$linktoimage.$t}}">
-                        </div>
-                        <h4 class="item-headline"><a href="{{this.gsx$linktoimage.$t}}">{{this.gsx$title.$t}}</a></h4>
-                        <h6 class="item-time-author"><span class="item-time">{{this.gsx$day.$t}}</span> | <a href="#">{{this.gsx$author.$t}}</a></h6>
-                        <p class="item-description">{{this.gsx$description.$t}}</p>
-                    </div>
-                    {{/each}}
-                </script>
-
-                <!--<div class="item">
+            <!-- for handlebars template -->
+            <script id="item-template" type="text/x-handlebars-template">
+                {{#each .}}
+                <div id="item{{@index}}" class="item">
                     <div class="item-img">
-                        <img src="img/dog.jpg">
+                        <img src="{{this.gsx$linktoimage.$t}}">
                     </div>
-                    <h4 class="item-headline">Lorem ipsum dolor sit amet</h4>
-                    <h6 class="item-time-author"><span class="item-time">November 3, 2016</span> | <a href="#">Anthony Lai</a></h6>
-                    <p class="item-description">Lorem ipsum dolor sit amet, ut quo dicunt oporteat. No accusam ancillae adversarium per. Eam an quem civibus. Duo diceret impedit vulputate ea. Eu vidit movet semper nec, ut vel choro admodum quaestio</p>
-                </div>-->
+                    <h4 class="item-headline"><a href="{{this.gsx$linktoimage.$t}}">{{this.gsx$title.$t}}</a></h4>
+                    <h6 class="item-time-author"><span class="item-time">{{this.gsx$day.$t}}</span> | <a href="#">{{this.gsx$author.$t}}</a></h6>
+                    <p class="item-description">{{this.gsx$description.$t}}</p>
+                </div>
+                {{/each}}
+            </script>
+            <div class="item-container">
+                <!-- handlebar will populate here -->
             </div>
 
         </div><!-- End main -->
