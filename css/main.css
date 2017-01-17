@@ -246,6 +246,13 @@ picture {
   margin-top: 10px;
   margin-bottom: 5px; }
 
+.item-headline a {
+  color: black;
+  word-spacing: 0px; }
+
+.item-headline a:hover {
+  text-decoration: underline; }
+
 .item-time-author {
   margin-bottom: 0px;
   color: #999; }

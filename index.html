@@ -24,6 +24,9 @@
         
         <!-- Custom Fonts -->
 
+        <!-- Handlebars CDN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+
         
     </head>
     
@@ -54,23 +57,27 @@
             </nav>
 
             <div class="item-container">
-                <div class="item">
-                    <div class="item-img">
-                        <img src="img/dog.jpg">
+                <script id="item-template" type="text/x-handlebars-template">
+                    {{#each .}}
+                    <div id="item{{@index}}" class="item">
+                        <div class="item-img">
+                            <img src="{{this.gsx$linktoimage.$t}}">
+                        </div>
+                        <h4 class="item-headline"><a href="{{this.gsx$linktoimage.$t}}">{{this.gsx$title.$t}}</a></h4>
+                        <h6 class="item-time-author"><span class="item-time">{{this.gsx$day.$t}}</span> | <a href="#">{{this.gsx$author.$t}}</a></h6>
+                        <p class="item-description">{{this.gsx$description.$t}}</p>
                     </div>
-                    <h4 class="item-headline">Lorem ipsum dolor sit amet</h4>
-                    <h6 class="item-time-author"><span class="item-time">November 3, 2016</span> | <a href="#">Anthony Lai</a></h6>
-                    <p class="item-description">Lorem ipsum dolor sit amet, ut quo dicunt oporteat. No accusam ancillae adversarium per. Eam an quem civibus. Duo diceret impedit vulputate ea. Eu vidit movet semper nec, ut vel choro admodum quaestio</p>
-                </div>
+                    {{/each}}
+                </script>
 
-                <div class="item">
+                <!--<div class="item">
                     <div class="item-img">
                         <img src="img/dog.jpg">
                     </div>
                     <h4 class="item-headline">Lorem ipsum dolor sit amet</h4>
                     <h6 class="item-time-author"><span class="item-time">November 3, 2016</span> | <a href="#">Anthony Lai</a></h6>
                     <p class="item-description">Lorem ipsum dolor sit amet, ut quo dicunt oporteat. No accusam ancillae adversarium per. Eam an quem civibus. Duo diceret impedit vulputate ea. Eu vidit movet semper nec, ut vel choro admodum quaestio</p>
-                </div>
+                </div>-->
             </div>
 
         </div><!-- End main -->
@@ -82,6 +89,6 @@
             
 
         <script src="http://code.jquery.com/jquery-1.11.3.js" type="text/javascript"></script>
-        <script src="javascripts/custom.js" type="text/javascript"></script>
+        <script src="js/main.js" type="text/javascript"></script>
     </body>
 </html>
