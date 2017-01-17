@@ -13,11 +13,19 @@
     display: inline-block;
     margin-left: 5px;
     margin-right: 5px;
+
+    @media only screen and (max-width: $media-breakpoint-smartphones-big) {
+        margin-left: 2px;
+        margin-right: 2px;
+    }
 }
 
 .navbar ul li a {
     color: $navbar-text-color;
     padding: 0 1px 0 1px;
+    @media only screen and (max-width: $media-breakpoint-smartphones-big) {
+        font-size: $base-font-size * 0.8;
+    }
 }
 
 .navbar ul li a:hover {
@@ -29,6 +37,11 @@
     width: 2px;
     @include transform(translate(0, 10%));  // move down a bit
     background-color: $navbar-text-color;
+
+    @media only screen and (max-width: $media-breakpoint-smartphones-big) {
+        height: 12px;
+        width: 1px;
+    }
 }
 
 .navbar-active {

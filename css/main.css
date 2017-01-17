@@ -186,10 +186,17 @@ picture {
   display: inline-block;
   margin-left: 5px;
   margin-right: 5px; }
+  @media only screen and (max-width: 640px) {
+    .navbar ul li {
+      margin-left: 2px;
+      margin-right: 2px; } }
 
 .navbar ul li a {
   color: black;
   padding: 0 1px 0 1px; }
+  @media only screen and (max-width: 640px) {
+    .navbar ul li a {
+      font-size: 0.8em; } }
 
 .navbar ul li a:hover {
   border-bottom: 2px solid #477dca; }
@@ -203,6 +210,10 @@ picture {
   -o-transform: translate(0, 10%);
   transform: translate(0, 10%);
   background-color: black; }
+  @media only screen and (max-width: 640px) {
+    .navbar .navbar-divider {
+      height: 12px;
+      width: 1px; } }
 
 .navbar-active {
   border-bottom: 2px solid #477dca; }
