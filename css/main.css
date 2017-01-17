@@ -188,7 +188,11 @@ picture {
   margin-right: 5px; }
 
 .navbar ul li a {
-  color: black; }
+  color: black;
+  padding: 0 1px 0 1px; }
+
+.navbar ul li a:hover {
+  border-bottom: 2px solid #477dca; }
 
 .navbar .navbar-divider {
   height: 15px;
@@ -199,5 +203,8 @@ picture {
   -o-transform: translate(0, 10%);
   transform: translate(0, 10%);
   background-color: black; }
+
+.navbar-active {
+  border-bottom: 2px solid #477dca; }
 
 /*# sourceMappingURL=main.css.map */
