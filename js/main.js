@@ -49,10 +49,19 @@ function filterData(category) {
     }
 }
 
+function removeActive() {
+    $(".main .navbar ul li a").toArray().forEach(function (element) {
+        $(element).removeClass("navbar-active");
+    });
+}
+
 function changeActive() {
     $(".main .navbar ul li a").toArray().forEach(function (element) {
         $(element).click(function () {
             console.log("clicked");
+
+            removeActive();
+            $(element).addClass("navbar-active");
 
             if ($(element).parent().is(":nth-child(1)")) {
                 filterData("All");
