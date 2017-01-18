@@ -67,6 +67,8 @@ h3, h4 {
         // Large screens
     /* TODO: test larger screen width */
     font-size: $medium-heading-font-size * 1.3;
+    width: 520px;
+    margin: auto;
     
     //    Desktops and laptops
     @media only screen and (max-width: $media-breakpoint-desktops) {
@@ -86,11 +88,13 @@ h3, h4 {
     //    Smartphones (landscape)
     @media only screen and (max-width: $media-breakpoint-smartphones-land) {
         font-size: $medium-heading-font-size * 1.2;
+        width: 400px;
     }
 
     //    Big smartphones (portrait) (ie: Galaxy 3 has 360)
     @media only screen and (max-width: $media-breakpoint-smartphones-big) {
         font-size: $medium-heading-font-size * 1.1;
+        width: 350px;
     }
 
     //    Smartphones (portrait) (ie: Galaxy 1)

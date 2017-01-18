@@ -24,6 +24,7 @@ function populateItems() {
         url: "https://spreadsheets.google.com/feeds/list/1eigBGV50ScQkGjgPTuH9WO8tYUmN2UpdM-XTFzh-lyQ/od6/public/values?alt=json",
         success: function(data) {
             ITEMS_DATA = data.feed.entry
+            console.log(ITEMS_DATA);
             displayItems(ITEMS_DATA);
         },
         error: function(e) {
