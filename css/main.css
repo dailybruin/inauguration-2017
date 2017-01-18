@@ -192,7 +192,8 @@ picture {
 
 .main-description {
   margin-top: 0px;
-  margin-bottom: 50px; }
+  margin-bottom: 50px;
+  padding: 0 20px 0 20px; }
 
 .navbar {
   text-align: center; }
