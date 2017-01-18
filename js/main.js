@@ -18,6 +18,19 @@ function displayItems(data) {
     $(".item-container").append(html);
 }
 
+function filterEmptyData(ITEMS_DATA) {
+    var filteredData = [];
+    Object.keys(ITEMS_DATA).forEach(function(key, idx) {
+        if (ITEMS_DATA[key].gsx$title.$t !== "") {
+            var temp = {};
+            temp[key] = ITEMS_DATA[key];
+            filteredData.push(ITEMS_DATA[key]);
+        }
+    });
+    ITEMS_DATA = filteredData;
+    displayItems(ITEMS_DATA);
+}
+
 function populateItems() {
     $.ajax({
         dataType: "json",
@@ -25,7 +38,8 @@ function populateItems() {
         success: function(data) {
             ITEMS_DATA = data.feed.entry
             console.log(ITEMS_DATA);
-            displayItems(ITEMS_DATA);
+            // displayItems(ITEMS_DATA);
+            filterEmptyData(ITEMS_DATA);
         },
         error: function(e) {
             console.log("fail");
