@@ -18,7 +18,7 @@ function displayItems(data) {
     $(".item-container").append(html);
 }
 
-function filterEmptyData(ITEMS_DATA) {
+function filterEmptyData() {
     var filteredData = [];
     Object.keys(ITEMS_DATA).forEach(function(key, idx) {
         if (ITEMS_DATA[key].gsx$title.$t !== "") {
@@ -39,7 +39,7 @@ function populateItems() {
             ITEMS_DATA = data.feed.entry
             console.log(ITEMS_DATA);
             // displayItems(ITEMS_DATA);
-            filterEmptyData(ITEMS_DATA);
+            filterEmptyData();
         },
         error: function(e) {
             console.log("fail");
