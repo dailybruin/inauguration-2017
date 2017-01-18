@@ -175,7 +175,6 @@ picture {
 
 .main {
   width: 100%;
-  margin-top: -20px;
   background-color: white;
   position: relative;
   -webkit-transform: translateZ(1px);

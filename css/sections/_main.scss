@@ -2,7 +2,7 @@
 
 .main {
     width: 100%;
-    margin-top: -20px;
+    // margin-top: -20px;
     background-color: white;
     position: relative; //  because of fixed, need to include this line to show
     @include transform(translateZ(1px));    //  fix safari z-index with fixed issue
