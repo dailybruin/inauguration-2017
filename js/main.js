@@ -22,9 +22,14 @@ function filterEmptyData() {
     var filteredData = [];
     Object.keys(ITEMS_DATA).forEach(function(key, idx) {
         if (ITEMS_DATA[key].gsx$title.$t !== "") {
-            var temp = {};
-            temp[key] = ITEMS_DATA[key];
             filteredData.push(ITEMS_DATA[key]);
+
+            // auto generate author link
+            if (ITEMS_DATA[key].gsx$linktoauthor.$t === "") {
+                var author = filteredData[key].gsx$author.$t;
+                filteredData[key].gsx$linktoauthor.$t = "http://dailybruin.com/author/" + author.substr(0, str.indexOf(' ')) + "-" + author.substr(str.indexOf(' ')+1);
+            }
+            console.log(ITEMS_DATA[key].gsx$linktoauthor);
         }
     });
     ITEMS_DATA = filteredData;
@@ -38,7 +43,6 @@ function populateItems() {
         success: function(data) {
             ITEMS_DATA = data.feed.entry
             console.log(ITEMS_DATA);
-            // displayItems(ITEMS_DATA);
             filterEmptyData();
         },
         error: function(e) {
@@ -55,8 +59,6 @@ function filterData(category) {
         var filteredData = [];
         Object.keys(ITEMS_DATA).forEach(function(key, idx) {
             if (ITEMS_DATA[key].gsx$category.$t === category) {
-                var temp = {};
-                temp[key] = ITEMS_DATA[key];
                 filteredData.push(ITEMS_DATA[key]);
             }
         });
