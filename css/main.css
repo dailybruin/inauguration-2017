@@ -190,6 +190,10 @@ picture {
     -o-transform: translate(0, 20%);
     transform: translate(0, 20%); }
 
+.main-description {
+  margin-top: 0px;
+  margin-bottom: 50px; }
+
 .navbar {
   text-align: center; }
 
