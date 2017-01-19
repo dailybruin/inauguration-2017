@@ -21,7 +21,7 @@ function displayItems(data) {
 function filterEmptyData() {
     var filteredData = [];
     Object.keys(ITEMS_DATA).forEach(function(key, idx) {
-        if (ITEMS_DATA[key].gsx$title.$t !== "") {
+        if (ITEMS_DATA[key].gsx$title.$t !== "" && ITEMS_DATA[key].gsx$linktostory.$t !== "") {
             filteredData.push(ITEMS_DATA[key]);
         }
     });
