@@ -23,14 +23,16 @@ function filterEmptyData() {
     Object.keys(ITEMS_DATA).forEach(function(key, idx) {
         if (ITEMS_DATA[key].gsx$title.$t !== "") {
             filteredData.push(ITEMS_DATA[key]);
-
-            // auto generate author link
-            if (ITEMS_DATA[key].gsx$linktoauthor.$t === "") {
-                var author = filteredData[key].gsx$author.$t;
-                filteredData[key].gsx$linktoauthor.$t = "http://dailybruin.com/author/" + author.substr(0, author.indexOf(' ')) + "-" + author.substr(author.indexOf(' ')+1);
-            }
-            console.log(ITEMS_DATA[key].gsx$linktoauthor);
         }
+    });
+
+    Object.keys(filteredData).forEach(function(key, idx) {
+        // auto generate author link
+        if (filteredData[key].gsx$linktoauthor.$t === "") {
+            var author = filteredData[key].gsx$author.$t;
+            filteredData[key].gsx$linktoauthor.$t = "http://dailybruin.com/author/" + author.substr(0, author.indexOf(' ')) + "-" + author.substr(author.indexOf(' ')+1);
+        }
+        console.log(filteredData[key].gsx$linktoauthor);
     });
     ITEMS_DATA = filteredData;
     displayItems(ITEMS_DATA);
