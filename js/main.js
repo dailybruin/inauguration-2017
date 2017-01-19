@@ -30,7 +30,7 @@ function filterEmptyData() {
         // auto generate author link
         if (filteredData[key].gsx$linktoauthor.$t === "") {
             var author = filteredData[key].gsx$author.$t;
-            filteredData[key].gsx$linktoauthor.$t = "http://dailybruin.com/author/" + author.substr(0, author.indexOf(' ')) + "-" + author.substr(author.indexOf(' ')+1);
+            filteredData[key].gsx$linktoauthor.$t = "http://dailybruin.com/author/" + author.substr(0, author.indexOf(' ')).toLowerCase() + "-" + author.substr(author.indexOf(' ')+1).toLowerCase();
         }
         console.log(filteredData[key].gsx$linktoauthor);
     });
